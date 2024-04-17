@@ -1,0 +1,15 @@
+.editorContainer {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   color: rgba(255, 255, 255, 0.81);
+   width: 100%;
+   height: 100%;
+   overflow-y: scroll;
+   padding: 8% 20%;
+}
+
+.menuContainer {
+   display: flex;
+   gap: 4px;
+}
