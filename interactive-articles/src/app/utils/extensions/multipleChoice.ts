@@ -2,6 +2,7 @@ import { Node, mergeAttributes } from "@tiptap/core";
 import { ReactNodeViewRenderer } from "@tiptap/react";
 import MultipleChoiceComp from "@/app/(components)/MultipleChoiceComp/multipleChoiceComp";
 
+// creating new node of type multipleChoiceQuestion
 export default Node.create({
    name: "multipleChoiceQuestion",
    group: "block",
@@ -10,8 +11,8 @@ export default Node.create({
       return {
          question: { default: "New question..." },
          options: { default: ["Option 1", "Option 2"] },
-         selectedOption: { default: null },
-         mode: { default: "edit" }, // 'edit' or 'view'
+         isEdit: { default: true }, // 'edit' or 'view'
+         id: { default: Date.now() },
       };
    },
    parseHTML() {
